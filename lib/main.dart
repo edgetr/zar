@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(home: Dice()));
+
 }
 
 class Dice extends StatefulWidget {
@@ -38,20 +39,39 @@ class _DiceState extends State<Dice> {
                         fontSize:
                             100,
                         fontWeight: FontWeight.bold,
-                        color: Colors
-                            .white,
+                        color: Colors.red
+                            ,
                       ),
                     ),
                   ],
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
-                  child: Text('Roll Dice'),
+                  child: Text('Roll Dice', style: TextStyle(color: Colors.red )),
                   onPressed: rollDice,
                 ),
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
+    return Container(
+      width: screenSize.width,
+      height: screenSize.height,
+      decoration: BoxDecoration(
+        
+        image: DecorationImage(
+          colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.1), BlendMode.dstATop),
+          image: const AssetImage('asset/background.jpg'),
+          fit: BoxFit.cover,
         ),
       ),
     );
