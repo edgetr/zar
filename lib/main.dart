@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
         image: DecorationImage(
           colorFilter: ColorFilter.mode(
               Colors.black.withOpacity(0.1), BlendMode.dstATop),
-          image: AssetImage('asset/background.jpg'),
+          image: const AssetImage('asset/background.jpg'),
           fit: BoxFit.cover,
         ),
       ),
